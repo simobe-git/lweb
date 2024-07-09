@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xml:lang="en" lang="en">
+
+<head>
+    <title>Pagina di Registrazione</title>
+
+    <style>
+
+        body{
+            background-color: salmon;
+        }
+
+        h1{
+            font-size: 300%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            color: red;
+        }
+
+
+        fieldset{
+            margin: 10px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 15px;
+            margin-left: 35%; 
+            width: 30%;
+            font-size: 120%;
+        }
+
+        .form{
+            display: flex;
+            margin-bottom: 1%;
+            margin-right: 50%;
+            flex-direction: column;
+            align-items: left;
+            margin: 10%;
+        }
+
+        .radio{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            margin-top: 2%;
+            margin-bottom: 2%;
+        }
+
+        .submit{
+            display: flex;
+            margin-top: 3%;
+        }
+
+        tbody{
+            display: flexbox;
+            flex-direction: column;
+            justify-content: left;
+            align-items: left;
+        }
+
+        input{
+            margin-bottom: 3%;
+            height: 40px;
+            border-radius: 15px;
+            border-style: double;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Pagina di registrazione</h1>
+
+    <fieldset>
+        <legend>Inserisci Dati</legend>
+
+        <table border="0" cellpadding="1" cellspacing="10">
+            <tbody>
+                <thead>
+                    <tr>
+                        <td colspan="2" style="font-size: 140%;">Creazione account</td>
+                    </tr>
+                </thead>
+
+                <form action="..\..\primoHomework.html" method="post">  
+
+                <tr>
+                    <td colspan="2">
+                        <hr />
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <label for="nome">Nome</label><br />
+                        <input type="text" id="nome" size="10" placeholder="Inserisci nome" required>
+                    </td>
+                    <td>
+                        <label for="cognome">Cognome</label>
+                        <input type="text" id="cognome" size="16" maxlength="16" placeholder="Inserisci cognome" required>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="cf">Codisce fiscale</label>
+                        <input type="text" size="20" id="cf" placeholder="Inserisci codice fiscale" required>
+                    </td>
+                    <td>
+                        <label for="nascita">Data di nascita</label>
+                        <input type="date" id="nascita" placeholder="gg/mm/aaaa" required>
+                    </td> 
+                </tr>
+                <tr>
+                    <td>
+                        <label for="numero">Recapito telefonico</label>
+                        <input type="tel" id="numero" placeholder="Inserisci numero di telefono" required>
+                    </td>
+                    <td>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Indirizzo di posta elettronica" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Inserisci password" required>
+                    </td>
+                    <td>
+                        <label for="password">Conferma password</label>
+                        <input type="password" id="password" placeholder="Reinserisci password" required>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset">
+                        <input type="submit">
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+            </form>
+            </tbody>
+                
+        </table>
+
+    </fieldset>
+
+</body>
+</html>

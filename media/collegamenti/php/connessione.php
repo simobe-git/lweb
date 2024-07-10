@@ -1,12 +1,13 @@
 <?php
 
 $user = "root";
-$password = "";
+$password = "homework2";
 $db = "lweb";
 $table_name = "utenti";
 
 $connection = new mysqli("localhost", $user, $password, $db);
 
-if( $connection == false){
-    die("errore durante la connessione: " . $connection->connect_error);
+if( mysqli_connect_errno() ){
+    printf("errore di connessione con il DB: %s\n", mysqli_connect_error());
+    exit();
 }

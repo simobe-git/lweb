@@ -3,19 +3,25 @@
 include("connessione.php");	
 
 //funzione che verifica la presenza di una tabella nel database
-function if_table_exists ($conn, $tablename){
+function if_table_exists ($connection, $tablename){
 	//controllo se il nome della tabella passato esiste nel db
-	$result = mysqli_query($conn,"SHOW TABLES LIKE '".$tablename."'");
+	$result = mysqli_query($connection,"SHOW TABLES LIKE '".$tablename."'");
 	//conto il numero di righe risultanti
 	$row=mysqli_num_rows($result);
-	if($row>0){          //se $row è maggiore di 0
+	if($row>0){          
 		return true;
 	}else{	
 		return false;
 	}
 }
 
+//creazione del database
+mysqli_query($connection, "DROP DATABASE IF EXISTS lweb");
+mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS lweb");
+mysqli_query($connection, "USE lweb");
 
+
+//creazione delle tabelle e loro popolamento con dati scelti da me
 $tabellaUtenti=	"CREATE TABLE if NOT EXISTS utenti(
 			username VARCHAR(30) NOT NULL ,
 			email VARCHAR(20) NOT NULL ,
@@ -40,24 +46,24 @@ $aggiungiBiglietti = "INSERT INTO biglietti (tipo,prezzo) VALUES
 ('venerdi', 34.99)";
 
 
-if(if_table_exists($conn,"utenti"))
+if(if_table_exists($connection,"utenti"))
 {
 	//se la tabella esista non bisogra nè crearla nè popolarla
 	//potrei anche mettere una stampa del tipo echo 'La tabella esiste!';
 }
 else{
-	mysqli_query($conn, $tabellaUtenti);
+	mysqli_query($connection, $tabellaUtenti);
 		echo 'Tabella creata';
-   	mysqli_query($conn,$aggiungiUtenti);
+   	mysqli_query($connection,$aggiungiUtenti);
 }
 
 
-if(if_table_exists($conn,"biglietti")){ /*idem */ }
+if(if_table_exists($connection,"biglietti")){ /*idem */ }
 else{
-	mysqli_query($conn,$tabellaBiglietti);
+	mysqli_query($connection,$tabellaBiglietti);
 		echo 'Tabella creata';
-   	mysqli_query($conn,$aggiungiBiglietti);
+   	mysqli_query($connection,$aggiungiBiglietti);
 }
 
-mysqli_close($conn);
+mysqli_close($connection);
 ?>

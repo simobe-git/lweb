@@ -8,14 +8,19 @@ function if_table_exists ($conn, $tablename){
 	$result = mysqli_query($conn,"SHOW TABLES LIKE '".$tablename."'");
 	//conto il numero di righe risultanti
 	$row=mysqli_num_rows($result);
-	if($row>0){          //se $row è maggiore di 0
+	if($row>0){         
 		return true;
 	}else{	
 		return false;
 	}
 }
 
+//creazione del database
+mysqli_query($connection, "DROP DATABASE IF EXISTS lweb");
+mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS lweb");
+mysqli_query($connection, "USE lweb");
 
+//creazione delle tabelle e loro popolamento con dati scelti da me
 $tabellaUtenti=	"CREATE TABLE if NOT EXISTS utenti(
 			username VARCHAR(30) NOT NULL ,
 			email VARCHAR(20) NOT NULL ,

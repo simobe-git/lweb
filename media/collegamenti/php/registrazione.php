@@ -48,8 +48,8 @@ if(isset($_POST["invio"])){
         $pattern = '/^\d{4}-\d{2}-\d{2}$/'; 
         return preg_match($pattern, $date) === 1; 
     } 
-      
-    // Driver code 
+
+
     if (!validateDate($_POST['dataNascita'])) { 
         $riprova = 1;
         $err.="<br />- Data di nascita non valida.";

@@ -16,7 +16,7 @@ if(isset($_POST["invio"])) {
         }
         else{
             
-            require_once("connessione.php");   //inizialmente era cosi, poi ho provato install.php ma non va
+            require_once("connessione.php");
             // controllo dati dalla tabella
             $sql = "SELECT *
             FROM $table_name

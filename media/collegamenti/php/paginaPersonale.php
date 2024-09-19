@@ -1,31 +1,29 @@
 <?php 
 
-$username = "";
-
+if(isset($_POST['username'])){
+    $username = $_POST['username'];    //$username = "";
+}
 session_start();
-// $_SESSION['username'] = $_POST['username'];  //serve per far arrivare lo username alla pagina 'carrello.php'
 
-if(isset($_POST['accesso'])){ //se succede significa che arriviamo dalla form di scelta username (registrazione)
+if(isset($_POST['accesso'])){     //se succede significa che arriviamo dalla form di scelta username (in fase di registrazione)
     $_SESSION['accessoPermesso'] = $_POST['accesso'];
-    //debuggin       print_r($_COOKIE);  //OKOKOK, E' ANCORA SETTATO
-    //debuggin       echo $_SESSION['accessoPermesso'];  //OKOKOK
+    $_SESSION['username'] = $_POST['username'];
+    $username = $_POST['username'];
 }
 
-if(isset($_COOKIE['accesso'])){  //cookie impostato nella pagina 'menu2.php', ed ha lo scopo di far capire che stiamo tornando nell'area riservata a partire dalla zona pagamenti
-    //debuggin        echo $_SESSION['accessoPermesso'];  //OKOKOK
+if(isset($_COOKIE['accesso'])){    //cookie impostato nella pagina 'menu2.php', ed ha lo scopo di far capire che stiamo tornando nell'area riservata dopo aver effettuato il pagamento
     if($_COOKIE['accesso'] == 1){
         $_SESSION['accessoPermesso'] = 100;
         if(!(empty($_SESSION['username']))){
-            //debugging        echo $_SESSION['accessoPermesso'];  //NON VIENE ESEGUITO
-            $username = $_SESSION['username'];   //01-07, prima invece dell'if c'era solamente questa riga
+            $username = $_SESSION['username'];
         }
         $_SESSION['ora'] = time();
     }
-}elseif(isset($_SESSION['accessoPermesso'])){
-    if($_SESSION['accessoPermesso'] == 100){  //se $_SESSION['accessoPermesso] == 100 significa che provengo dalla pagina di registrazione
+}
+if(isset($_SESSION['accessoPermesso'])){
+    if($_SESSION['accessoPermesso'] == 100){  //se $_SESSION['accessoPermesso] == 100 significa che ho fatto la registrazione
         $_SESSION['ora'] = time();
-        $username = $_POST['username'];
-        $_SESSION['username'] = $_POST['username'];
+        $username = $_SESSION['username'];
     }elseif($_SESSION['accessoPermesso'] == 1000){  //in tal caso provengo dalla pagina di login
         $_SESSION['ora'] = time();
         $username = $_SESSION['username'];
@@ -38,18 +36,24 @@ else{
     exit();
 }
 
-if(  ($_SESSION['accessoPermesso'] == 100 ) || ( isset($_POST['reinserisci']) ) ){    //$_POST['reinserisci'] arriva dallo script'reinserisciUsername.php'
-                                                                                      //ovvero quando, dopo aver fatto la registrazione si inserisce uno
-                                                                                      //username già presente nella BD
+if(isset($_POST['reinserisci'])){       //$_POST['reinserisci'] arriva dallo script'reinserisciUsername.php'
+                                        //ovvero quando, dopo aver fatto la registrazione si inserisce uno
+                                        //username già presente nella BD
+    $_SESSION['username'] = $_POST['nuovoUsername'];
+    $username = $_POST['nuovoUsername'];
+}
+
+if(  ($_SESSION['accessoPermesso'] == 100 ) || ( isset($_POST['reinserisci']) ) ){    
     if(isset($_POST['username'])){
 
+        $_SESSION['username'] = $_POST['username'];
         $pass = $_SESSION['password'];
         $email = $_SESSION['email'];
 
         require("connessione.php");
         $sql = "SELECT username
                 FROM $table_name
-                WHERE username = \"{$_POST['username']}\"
+                WHERE username = \"{$_SESSION['username']}\"    /* {$_POST['username']}\ non funziona in tutti i casi (tipo se va reinserito lo username perchè già esistente nel DB */
                 ";
 
         if (!$resultQ = mysqli_query($connection, $sql)) {
@@ -84,12 +88,6 @@ if(  ($_SESSION['accessoPermesso'] == 100 ) || ( isset($_POST['reinserisci']) ) 
 
 //unset($_SESSION['accessoPermesso']);  //necessario perchè se provengo da altri script con un 'accessoPermesso' diverso
                                       //da quello desiderato questo script eseguirà istruzioni che non vorremmo eseguisse
-
-/* if($_SESSION['paga']){  //proveniamo dal pagamento del biglietto
-    echo "<p style=\"font-size: 150%; color: blue; text-align: center;\">Pagamento andato a buon fine!";
-}elseif($_SESSION['areaR']){
-    echo "<p style=\"font-size: 150%; color: blue; text-align: center;\">Cambia le tue scelte";
-} */
 
 ?>
 
@@ -151,14 +149,6 @@ xml:lang="en" lang="en">
 <body>
 
 <h2>Accesso eseguito con successo</h2>
-
-
-
-<!--  DEBUGGING  
-<h3> print_r($_SESSION) </h3>
-<h3> print_r($_POST) </h3>
-<h3> print_r($_COOKIE) </h3>    
- -------------- -->
  
 
 <?php if(!isset($_SESSION['accessoPermesso'])) echo "NO"; ?>

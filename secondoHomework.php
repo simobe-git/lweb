@@ -13,6 +13,14 @@ xml:lang="en" lang="en">
                                                                         
 </head>
 
+<?php 
+session_start();
+unset($_SESSION);
+session_destroy();
+
+setcookie('accesso', '');
+?>
+
 <body>
 
     <div class="c">

@@ -43,7 +43,7 @@ Errore: lo username inserito esiste gi&agrave;!<br /> Immetti un altro username.
 <h1 style="text-align: center; color: white; font-size: 230%; margin-top: 50px;">Reinserisci username</h1>
 <div class="form">
     <form action="paginaPersonale.php" method="post">
-        <input type="text" name="username" placeholder="UserName"><br />  <!-- con la BD controllare se non esiste già -->
+        <input type="text" name="nuovoUsername" placeholder="UserName"><br />
         <input style="border-radius: 10px; width: 100px; height: 30px;" type="submit" value="procedi" name="reinserisci">
     </form>
 </div>

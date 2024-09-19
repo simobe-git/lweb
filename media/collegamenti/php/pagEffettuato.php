@@ -1,6 +1,5 @@
 <?php 
 
-//distruggiamo la sessione
 session_start();
 if(isset($_SESSION['tot'])){
     $totale = $_SESSION['tot'];
@@ -59,7 +58,9 @@ xml:lang="en" lang="en">
 
 <body>
 
-<?php 
+<?php
+//inserisco un semplice controllo dei soldi partendo da un portafoglio virtuale contenente 220 euro. Se non si hanno abbastanza soldi 
+//viene stampato sullo schermo. Non ho però fatto tutti i casi possibili, mi sono limitato ad una manciata
     if(!empty($_COOKIE['pagamento'])){  
     $soldiPortafogli = 220;             //supponiamo di avere 220 euro in una carta/conto corrente
     if($totale > $soldiPortafogli){

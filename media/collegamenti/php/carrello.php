@@ -22,7 +22,7 @@ if(isset($_SESSION['biglietto'])){
 }
 
 //qui proveniamo da 'accessoPaddock.php'
-if(isset($_SESSION['pass'])){  //settato nello script 'accessoPaddock.php'
+if(isset($_SESSION['pass'])){      //settato nello script 'accessoPaddock.php'
     if($_SESSION['pass'] == 1){
         $setPass = 1;  
     }else $setPass = 2; 
@@ -30,11 +30,11 @@ if(isset($_SESSION['pass'])){  //settato nello script 'accessoPaddock.php'
 
 
 //qui invece proveniamo dallo script 'autografi.php'
-if(isset($_SESSION['giorno'])){  //proviene dello script autografi.php
+if(isset($_SESSION['giorno'])){     //proviene dello script autografi.php
     $giorno = $_SESSION['giorno'];
 }
 
-if(isset($_POST["invioP"])){  //assegnamento di $pilota alla scelta effettuata nella form dei piloti
+if(isset($_POST["invioP"])){      //assegnamento di $pilota alla scelta effettuata nella form dei piloti
     if(isset($_POST['lec'])){
         $pilota = "Charles Leclerc";
     }elseif(isset($_POST['ver'])){
@@ -154,8 +154,8 @@ xml:lang="en" lang="en">
                     . $pr . "\$</strong>.</li>"; 
                     $totale += $pr;
                 } 
-              }
-        if($giorno){  //Se è stato scelto un giorno dallo script 'autografi.php'
+              }   
+        if($giorno){    //se è stato scelto un giorno dallo script 'autografi.php'
             echo "<li>Autografo firmato da <strong>" . $pilota . "</strong> in data <em> " . $giorno . "</em>. Prezzo: <strong>50$</strong>.</li>";
             $totale += 50;
         } 

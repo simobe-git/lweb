@@ -1,3 +1,34 @@
+<!-- .menu{
+    width: 100%;
+    height: 14%;
+    text-align: center;
+}
+
+.menu:hover{
+    background-color: rgb(57, 8, 142);
+}
+
+.menu nav{
+    position: absolute;
+    top: 3%;
+    width: 40%;
+    margin-right: 30%;
+    margin-left: 30%;
+}
+
+.menu a {
+    color: white; 
+    display: inline;
+    padding: 8px; 
+    text-decoration: none; /* link non sottolineati */
+    font-size:130%;
+  }
+  
+  .menu a:hover {
+    background-color: #070707; 
+  } -->
+
+
 <xml version="1.0" encoding="iso-8859-1">
 <!DOCTYPE html
 PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"

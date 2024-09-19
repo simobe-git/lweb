@@ -25,7 +25,6 @@ if(isset($_POST['invio'])){
         <input type=\"radio\" name=\"alo\">Fernando Alonso<br />
         <input type=\"submit\" name=\"invioP\" value=\"Procedi\" style=\"margin-top: 5%; border-radius: 5px;\">
     </form>";
-
 }
 
 ?>

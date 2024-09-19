@@ -1,9 +1,9 @@
 <?php
 
-$user = "root";
-$password = "homework2";
-$db = "lweb";
-$table_name = "utenti";
+$user = 'root';
+$password = 'homework2';  
+$db = 'belli';     //nuovo nome al DB
+$table_name = 'utenti';
 
 $connection = new mysqli("localhost", $user, $password, $db);
 

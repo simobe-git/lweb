@@ -3,16 +3,21 @@
 $username = "";
 
 session_start();
+// $_SESSION['username'] = $_POST['username'];  //serve per far arrivare lo username alla pagina 'carrello.php'
 
-if(isset($_POST['accesso'])){     //se succede significa che arriviamo dalla form di scelta username (registrazione)
+if(isset($_POST['accesso'])){ //se succede significa che arriviamo dalla form di scelta username (registrazione)
     $_SESSION['accessoPermesso'] = $_POST['accesso'];
+    //debuggin       print_r($_COOKIE);  //OKOKOK, E' ANCORA SETTATO
+    //debuggin       echo $_SESSION['accessoPermesso'];  //OKOKOK
 }
 
 if(isset($_COOKIE['accesso'])){  //cookie impostato nella pagina 'menu2.php', ed ha lo scopo di far capire che stiamo tornando nell'area riservata a partire dalla zona pagamenti
+    //debuggin        echo $_SESSION['accessoPermesso'];  //OKOKOK
     if($_COOKIE['accesso'] == 1){
         $_SESSION['accessoPermesso'] = 100;
         if(!(empty($_SESSION['username']))){
-            $username = $_SESSION['username'];   
+            //debugging        echo $_SESSION['accessoPermesso'];  //NON VIENE ESEGUITO
+            $username = $_SESSION['username'];   //01-07, prima invece dell'if c'era solamente questa riga
         }
         $_SESSION['ora'] = time();
     }
@@ -77,6 +82,15 @@ if(  ($_SESSION['accessoPermesso'] == 100 ) || ( isset($_POST['reinserisci']) ) 
     }
 }
 
+//unset($_SESSION['accessoPermesso']);  //necessario perchè se provengo da altri script con un 'accessoPermesso' diverso
+                                      //da quello desiderato questo script eseguirà istruzioni che non vorremmo eseguisse
+
+/* if($_SESSION['paga']){  //proveniamo dal pagamento del biglietto
+    echo "<p style=\"font-size: 150%; color: blue; text-align: center;\">Pagamento andato a buon fine!";
+}elseif($_SESSION['areaR']){
+    echo "<p style=\"font-size: 150%; color: blue; text-align: center;\">Cambia le tue scelte";
+} */
+
 ?>
 
 <xml version="1.0" encoding="iso-8859-1">
@@ -138,6 +152,15 @@ xml:lang="en" lang="en">
 
 <h2>Accesso eseguito con successo</h2>
 
+
+
+<!--  DEBUGGING  
+<h3> print_r($_SESSION) </h3>
+<h3> print_r($_POST) </h3>
+<h3> print_r($_COOKIE) </h3>    
+ -------------- -->
+ 
+
 <?php if(!isset($_SESSION['accessoPermesso'])) echo "NO"; ?>
 <h2>Benvenuto nella tua area riservata, <?php echo "<strong style=\"color: blue;\">" . $username . "</strong>!"; ?></h2>
 <p style="text-align: center;">Accesso effettuato alle <?php echo date('g:i a', $_SESSION['ora']); ?></p>
@@ -176,7 +199,7 @@ xml:lang="en" lang="en">
                         <a href="prenotazioni/accessoPaddock.php" style="text-decoration: none;">Accesso al paddock</a>
                     </th>
                     <th>
-                        <a href="prenotazioni/autografi2.php" style="text-decoration: none;">Autografi dai piloti</a>
+                        <a href="prenotazioni/autografi.php" style="text-decoration: none;">Autografi dai piloti</a>
                     </th>
                 </tr>
                 <tr style="background-color:darkkhaki;">

@@ -36,7 +36,7 @@ if(isset($_POST["invioB"])){
                 exit();
             }
 
-            $_SESSION['item'] =  "completo";   //tipo del biglietto selezionato
+            $_SESSION['item'] =  "completo"; //$_POST['biglietto'];  //tipo del biglietto selezionato
             $_SESSION['prezzo'] = $sol['prezzo'];     //prezzo del biglietto selezionato
 
             $_SESSION['biglietto'] = 1;
@@ -60,7 +60,7 @@ if(isset($_POST["invioB"])){
                 exit();
             }
 
-            $_SESSION['item'] = "sabato e domenica"; 
+            $_SESSION['item'] = "sabato e domenica"; //$_POST['biglietto'];
             $_SESSION['prezzo'] = $sol['prezzo'];
             $_SESSION['accessoPermesso'] = 1;
 
@@ -85,7 +85,7 @@ if(isset($_POST["invioB"])){
                 exit();
             }
 
-            $_SESSION['item'] = "solo venerdi"; 
+            $_SESSION['item'] = "solo venerdi"; //$_POST['biglietto'];
             $_SESSION['prezzo'] = $sol['prezzo'];
             $_SESSION['accessoPermesso'] = 1;
 

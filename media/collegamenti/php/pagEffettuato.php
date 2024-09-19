@@ -99,7 +99,7 @@ xml:lang="en" lang="en">
 require("menu2.php");
 
 setcookie('pagamento', '', time()-2);  // eliminazione cookie
-setcookie('areaR', '', time()-2);   
+setcookie('areaR', '', time()-2);  
 unset($_SESSION['pass']);
 ?>
 

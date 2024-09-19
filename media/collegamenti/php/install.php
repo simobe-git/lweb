@@ -16,12 +16,11 @@ function if_table_exists ($connection, $tablename){
 }
 
 //creazione del database
-mysqli_query($connection, "DROP DATABASE IF EXISTS lweb");
-mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS lweb");
-mysqli_query($connection, "USE lweb");
+mysqli_query($connection, "DROP DATABASE IF EXISTS belli");          //elimiamolo se esiste già
+mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS belli");    //creiamo il DB
+mysqli_query($connection, "USE belli");      //usiamo il DB
 
-
-//creazione delle tabelle e loro popolamento con dati scelti da me
+//creazione delle tabelle e loro popolamento (con dati scelti da me)
 $tabellaUtenti=	"CREATE TABLE if NOT EXISTS utenti(
 			username VARCHAR(30) NOT NULL ,
 			email VARCHAR(20) NOT NULL ,
@@ -48,7 +47,7 @@ $aggiungiBiglietti = "INSERT INTO biglietti (tipo,prezzo) VALUES
 
 if(if_table_exists($connection,"utenti"))
 {
-	//se la tabella esista non bisogra nè crearla nè popolarla
+	//se la tabella esiste non bisogra nè crearla nè popolarla
 	//potrei anche mettere una stampa del tipo echo 'La tabella esiste!';
 }
 else{

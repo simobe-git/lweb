@@ -6,8 +6,8 @@ Per fare ciò ho usato PhPMyAmdin.
 
 L'autore di questa pagina web è Simone Belli, matricola 2024391. 
 
-E' possibile consultare tutti i file (contenuti nelle relative cartelle) di questo secondo homework su GitHub: per fare ciò basta cercare l'utente 'simobe-git', accedere alla branch denominata '1stHomework' e successivamente ci si trova di fronte tutti i file necessari. Per accedere più velocemente, visitare il seguente link:
-https://github.com/simobe-git/lweb/tree/primoHomework
+E' possibile consultare tutti i file (contenuti nelle relative cartelle) di questo secondo homework su GitHub: per fare ciò basta cercare l'utente 'simobe-git', accedere alla branch denominata '2ndHomework' e successivamente ci si trova di fronte tutti i file necessari. Per accedere più velocemente, visitare il seguente link:
+https://github.com/simobe-git/lweb/tree/2ndHomework
 
 L'esercizio da me svolto vuole creare una pagina web sul mondo della Formula 1: l'idea iniziale era quella di emulare il più possibile la pagina ufficiale della F1, ma in realtà ho scelto di inserire cose che non sono sicuramente il top da un punto di vista estetico, ma che sono la prova che ho assimilato i concetti visti a lezione e provati nelle esercitazioni antecedenti alla stesura di questo homework. 
 ---------------------------------------------------------------------------------------------------

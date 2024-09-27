@@ -1,11 +1,9 @@
 <?php
 
-$user = 'root';
-$password = 'homework2';  
-$db = 'belli';     //nuovo nome al DB
-$table_name = 'utenti';
+//richiediamo i dati per la connessione al database 'belli'
+require_once("datiDiConnessione.php");
 
-$connection = new mysqli("localhost", $user, $password, $db);
+$connection = new mysqli($host, $user, $password, $db);
 
 if( mysqli_connect_errno() ){
     printf("errore di connessione con il DB: %s\n", mysqli_connect_error());

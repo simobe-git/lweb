@@ -1,6 +1,7 @@
 <?php
 
-include("connessione.php");	
+//dati per la connessione al db provenienti da un altro script
+require_once("datiDiConnessione.php");
 
 //funzione che verifica la presenza di una tabella nel database
 function if_table_exists ($connection, $tablename){
@@ -15,7 +16,9 @@ function if_table_exists ($connection, $tablename){
 	}
 }
 
-//creazione del database
+//collegamento al dbms e creazione del database
+$connection = new mysqli($host, $user, $password);
+
 mysqli_query($connection, "DROP DATABASE IF EXISTS belli");          //elimiamolo se esiste già
 mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS belli");    //creiamo il DB
 mysqli_query($connection, "USE belli");      //usiamo il DB

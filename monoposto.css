@@ -1,0 +1,46 @@
+infoMonoposto{
+    background-color: gray;
+}
+
+monoposto{
+    display: inline-block;
+    justify-content: center;
+    margin-block: red;
+    width: 300px;
+    border-style: solid;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 300px;
+    background-color: rgb(248, 248, 89);
+    justify-content: center;
+    text-align:center;
+}
+
+nome{
+    display: block;
+    color: red;
+    font-size: 150%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+team{
+    color: purple;
+    font-size: 130%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+peso{
+    display: block;
+    font-size: 130%;
+}
+
+vittorie{
+    display: block;
+    color: green;
+    font-size: 120%;
+}
+
+chilometraggio{
+    display: block;
+    font-size: 130%;
+}

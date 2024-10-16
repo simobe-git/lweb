@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xml:lang="en" lang="en">
+
+<head>
+    <title>Pagina di Login</title>
+
+    <style>
+
+        h1{
+            text-align: center;
+            font-size: 150%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        body{
+            font-size: 120%;
+            font-family: cursive;
+            background-color: rgb(34, 160, 82);
+        }
+
+        fieldset{
+            border-radius: 20px;
+            background-color: rgb(197, 197, 107);
+            width: 34%;
+            margin-left: 33%;
+            display: flex;
+            align-items: left;
+            margin-right: 33%;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: left;
+            width: 100%;
+        }
+
+        .emailpassword{
+            display: flex;
+            margin-bottom: 1%;
+            margin-right: 50%;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        .radio{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+        }
+
+        .submit{
+            display: flex;
+            margin-top: 2%;
+        }
+
+        .submit input{
+            width: 15%;
+            border-style: groove;
+        }
+
+        .submit input:hover{
+            background-color: grey;
+        }
+
+        input{
+            height: 30px;
+            border-style: solid;
+            border-radius: 10px;
+            border-style: hidden;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>Login pagina Formula 1</h1>
+
+    <p>
+        Non sei ancora registrato? Clicca <a href="registrazione.html">
+            qui</a> per registrarti ed entrare nella pagina ufficiale della Formula 1. 
+    </p>
+
+    <fieldset>
+        <legend>Immetti dati</legend> 
+
+        <form action="../php/loginn.php" method="post">
+            <div class="emailpassword">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="Inserisci email" required>
+        
+                <label for="password">Password</label>  
+                <input type="password" name="password" placeholder="Inserisci password" required>
+            </div>
+
+            <div class="radio">
+                <input type="radio" required>
+                <label for="accept">Accetto e sottoscrivo i <a href="#">Termini e condizioni d'uso</a></label><br />
+            </div>
+
+            <div class="submit">
+                <input type="reset" name="invio" value="Reset">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+
+
+    </fieldset>
+
+</body>

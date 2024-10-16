@@ -9,7 +9,7 @@ comprende frammenti di codice PHP accompagnato da alcuni collegamenti al Databas
 Per fare ciò abbiamo usato PhPMyAmdin.
 
 E' possibile consultare tutti i file (contenuti nelle relative cartelle) di questo terzo homework su GitHub, seguendo i seguenti link:
-- https://github.com/simobe-git/lweb/tree/2ndHomework ????modificarlo (mettere il percorso del 3rd)
+- https://github.com/simobe-git/lweb/tree/3rdHomework
 - ???????????quello di Samuele
 oppure basta cercare gli utenti:
 - 'simobe-git' e accedere alla branch denominata '3rdHomework' 

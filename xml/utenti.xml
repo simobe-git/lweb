@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<utenti>
+    <utente>
+        <username>cliente1</username>
+        <ruolo>cliente</ruolo>
+    </utente>
+    <utente>
+        <username>admin1</username>
+        <ruolo>admin</ruolo>
+    </utente>
+<utente><username>bella</username><ruolo>cliente</ruolo></utente><utente><username>belli</username><ruolo>cliente</ruolo></utente><utente><username>simonesimonesimone</username><ruolo>cliente</ruolo></utente></utenti>

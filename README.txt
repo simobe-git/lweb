@@ -33,3 +33,11 @@ I dati che vengono inseriti all'interno della tabella 'Utenti' per effettuare il
 		('abc123','abc@123.it','Pass3!'),
 		('lweb!','l@web.com','Pass4!'),
 		('2homework','2@hmw.com','Pass5!')";	
+--------------------------------------------------------------------------------------------------
+Questo terzo homework presenta differenze dagli altri due solamente nell'utilizzo e nella gestione di file XML. Abbiamo creato 3 diversi file XMl:
+- 'monoposto.xml', che è semplicemente un file XML contenente vari record e che ci permette di visualizzare a schermo le informazioni scritte nel file stesso in modo semplice ed intuitivo. Il file è collegato ad un codice CSS che crea un'interfaccia grafica personalizzata, e fa riferimento ad una grammatica (DTD) presente nell'apposita cartella all'interno della cartella 'media'->'collegamenti'->'xml'.
+- 'prenotaPosto.xml' è un file che ci permetterà, dalla homepage dell'applicazione, di prenotare un posto in tribuna per assistere ad una gara di Formula 1. Accedendo infatti alla sezione 'Prenota il posto' nel box in verde della homepage si entrerà in una pagina in cui sono mostrate le tribune del circuito e i posti totali. In basso si può compilare una form in cui si va a prenotare un posto nella tribuna desiderata, e si può scegliere il numero di posto. Se questo è stato già prenotato, la prenotazione non verrà effettuata e bisognerà cambiare posto. Se invece il numero di posto immesso è fuori dai limiti della tribuna (perchè la tribuna può ospitare meno persone) verrà detto all'utente che il numero di posto non è disponibile. 
+La grammatica di 'prenotaPosto.xml' è contenuta in un file DTD chiamato 'prenotaPosto.dtd'.
+Se la prenotazione è andata a buon fine verrà stampata in una tabella nella pagina collegata alla form, ovvero 'prenotazioniPosto.php'.
+- 'prenotazioni.xml' (che si riferisce al file php 'prenotazioniPosto.php') che permette di visualizzare le prenotazioni effettuate e di aggiungerne altre, rimuoverle oppure tornare alla homepage. Se l'utente sceglie di aggiungere o eliminare una prenotazione verrà conseguentemente modificato il file XML corrispondente, che quindi si aggiornerà con i dati aggiunti o eliminati. 
+La grammatica di questo file XML è contenuta in un file XSD, situtato anch'esso nell'apposta cartella.

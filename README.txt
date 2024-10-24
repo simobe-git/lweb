@@ -10,10 +10,10 @@ Per fare ciò abbiamo usato PhPMyAmdin.
 
 E' possibile consultare tutti i file (contenuti nelle relative cartelle) di questo terzo homework su GitHub, seguendo i seguenti link:
 - https://github.com/simobe-git/lweb/tree/3rdHomework
-- ???????????quello di Samuele
+- https://github.com/ICON39/xml-dom
 oppure basta cercare gli utenti:
 - 'simobe-git' e accedere alla branch denominata '3rdHomework' 
-- ?????'il git di Samuele e la branch che contiene l'homework
+- 'ICON39' git di Samuele e la repository 'samuele.dimario.XML-DOM'
 e successivamente ci si trova di fronte tutti i file necessari.
 
 

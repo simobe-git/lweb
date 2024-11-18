@@ -19,9 +19,16 @@ function if_table_exists ($connection, $tablename){
 //collegamento al dbms e creazione del database
 $connection = new mysqli($host, $user, $password);
 
-mysqli_query($connection, "DROP DATABASE IF EXISTS belli");          //eliminiamolo se esiste già
-mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS belli");    //creiamo il DB
-mysqli_query($connection, "USE belli");      //usiamo il DB
+/*    Questa parte dava un fatal error nel citare, nella query, il nome del database (poichè contiene caratteri speciali come punti e trattini) 
+mysqli_query($connection, "DROP DATABASE IF EXISTS simone.belli.XML-DOM");          //eliminiamolo se esiste già
+mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS simone.belli.XML-DOM");    //creiamo il DB
+mysqli_query($connection, "USE simone.belli.XML-DOM");      //usiamo il DB
+*/
+
+//usiamo la variabile $db presente in 'datiDiConnessione.php', che rappresenta il nome del database
+mysqli_query($connection, "DROP DATABASE IF EXISTS `$db`");          //eliminiamolo se esiste già
+mysqli_query($connection, "CREATE DATABASE IF NOT EXISTS `$db`");    //creiamo il DB
+mysqli_query($connection, "USE `$db`");      //usiamo il DB */
 
 //creazione delle tabelle e loro popolamento (con dati scelti da me)
 $tabellaUtenti=	"CREATE TABLE if NOT EXISTS utenti(
@@ -55,7 +62,7 @@ if(if_table_exists($connection,"utenti"))
 }
 else{
 	mysqli_query($connection, $tabellaUtenti);
-		echo 'Tabella creata';
+		echo 'Tabella creata! ';
    	mysqli_query($connection,$aggiungiUtenti);
 }
 
@@ -63,10 +70,11 @@ else{
 if(if_table_exists($connection,"biglietti")){ /*idem */ }
 else{
 	mysqli_query($connection,$tabellaBiglietti);
-		echo 'Tabella creata';
+		echo 'Tabella creata!';
    	mysqli_query($connection,$aggiungiBiglietti);
 }
 
 mysqli_close($connection);
 header("../../../terzoHomework.php");
+exit();
 ?>

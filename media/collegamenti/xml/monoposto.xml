@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="../../../monoposto.css"?>
+<!DOCTYPE infoMonoposto SYSTEM "../dtd/monoposto.dtd">
+
+<infoMonoposto>
+    <monoposto>    
+        <nome>SF-24</nome>
+        <team>Ferrari</team>
+        <peso>800 kg</peso>
+        <vittorie>3 vittorie</vittorie>
+        <chilometraggio>5.980 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>RB20</nome>
+        <team>Red Bull Racing</team>
+        <peso>799 kg</peso>
+        <vittorie>6 vittorie</vittorie>
+        <chilometraggio>5.999 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>MCL-38</nome>
+        <team>McLaren</team>
+        <peso>800 kg</peso>
+        <vittorie>4 vittorie</vittorie>
+        <chilometraggio>5.765 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>W15</nome>
+        <team>Mercedes</team>
+        <peso>798 kg</peso>
+        <vittorie>3 vittorie</vittorie>
+        <chilometraggio>5.869 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>VCARB01</nome>
+        <team>Racing Bulls</team>
+        <peso>803 kg</peso>
+        <vittorie>0 vittorie</vittorie>
+        <chilometraggio>5.525 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>AMR24</nome>
+        <team>Aston Martin</team>
+        <peso>805 kg</peso>
+        <vittorie>0 vittorie</vittorie>
+        <chilometraggio>5.761 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>FW46</nome>
+        <team>Williams</team>
+        <peso>802 kg</peso>
+        <vittorie>0 vittorie</vittorie>
+        <chilometraggio>4.930 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>A524</nome>
+        <team>Alpine</team>
+        <peso>808 kg</peso>
+        <vittorie>0 vittorie</vittorie>
+        <chilometraggio>6.554 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>VF-24</nome>
+        <team>Haas</team>
+        <peso>799 kg</peso>
+        <vittorie>0 vittorie</vittorie>
+        <chilometraggio>5.209 km</chilometraggio>
+    </monoposto>
+    <monoposto>
+        <nome>C44</nome>
+        <team>Stake F1 Team Sauber</team>
+        <peso>810 kg</peso>
+        <vittorie>0 vittorie</vittorie>
+        <chilometraggio>5.231 km</chilometraggio>
+    </monoposto>
+</infoMonoposto>

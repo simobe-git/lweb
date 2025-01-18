@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE posti SYSTEM "../dtd/prenotaPosto.dtd">
+
+<posti>
+    <tribuna>
+        <nome>Tribuna 1</nome>
+        <numPosti>150</numPosti>
+        <curva numCurva="1">
+            <nomeCurva>Prima Variante</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Tribuna 2</nome>
+        <numPosti>155</numPosti>
+        <curva numCurva="2">
+            <nomeCurva>Lesmo 1</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Ascari 1</nome>
+        <numPosti>200</numPosti>
+        <curva numCurva="3">
+            <nomeCurva>Ascari</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Ascari 2</nome>
+        <numPosti>180</numPosti>
+        <curva numCurva="3">
+            <nomeCurva>Ascari</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Tribuna 21</nome>
+        <numPosti>300</numPosti>
+        <curva numCurva="4">
+            <nomeCurva>Parabolica</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Piscina</nome>
+        <numPosti>80</numPosti>
+        <curva numCurva="5">
+            <nomeCurva>Curva Biassono</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Roggio</nome>
+        <numPosti>100</numPosti>
+        <curva numCurva="6">
+            <nomeCurva>Seconda Variante</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Vedano</nome>
+        <numPosti>65</numPosti>
+        <curva numCurva="7">
+            <nomeCurva>Rettilineo principale</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Tr</nome>
+        <numPosti>320</numPosti>
+        <curva numCurva="8">
+            <nomeCurva>Rivazza</nomeCurva>
+        </curva>
+    </tribuna>
+    <tribuna>
+        <nome>Trib</nome>
+        <numPosti>250</numPosti>
+        <curva numCurva="9">
+            <nomeCurva>Lesmo 2</nomeCurva>
+        </curva>
+    </tribuna>
+</posti>

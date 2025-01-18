@@ -1,0 +1,8 @@
+<!ELEMENT posti (tribuna+)>
+<!ELEMENT tribuna(nome+, numPosti+, curva+)>
+<!ELEMENT curva(nomeCurva)>
+<!ATTLIST curva
+                numCurva NMTOKEN  #REQUIRED>
+<!ELEMENT nome(#PCDATA)>
+<!ELEMENT numPosti(#PCDATA)>
+<!ELEMENT nomeCurva(#PCDATA)>

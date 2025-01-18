@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xml:lang="en" lang="en">
+
+<head>
+    <title>Pagina di Registrazione</title>
+
+    <style>
+
+        body{
+            background-color: salmon;
+        }
+
+        h1{
+            font-size: 300%;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+            color: red;
+        }
+
+
+        fieldset{
+            margin: 10px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 8px;
+            margin-left: 35%; 
+            width: 30%;
+            font-size: 130%;
+        }
+
+        .form{
+            display: flex;
+            margin-right: 50%;
+            flex-direction: column;
+            align-items: left;
+            margin: 10%;
+            margin-top: 4%;
+        }
+
+        .radio{
+            display: flex;
+            justify-content: left;
+            align-items: left;
+            margin-top: 5%;
+        }
+
+        .submit{
+            display: flex;
+            margin-top: 3%;
+        }
+
+        .submit input{
+            width: 40%;
+        }
+
+        .submit input:hover{
+            background-color: grey;
+        }
+
+        input{
+            width: fit-content;
+            margin-bottom: 3%;
+            height: 40px;
+            border-radius: 15px;
+            border-style: double;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Pagina di registrazione</h1>
+
+    <fieldset>
+        <legend>Inserisci Dati</legend>
+
+        <h1 style="font-size: 200%; color: black; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Creazione account</h1>
+        <hr />
+
+        <form action="../php/registrazione.php" method="post">
+
+            <div class="form">
+                <label for="nome">Nome </label>
+                <span style="color: white; font-size:70%;">No numeri e/o caratteri speciali</span>
+                <input type="text" name="nome" size="20" placeholder="Nome" required>
+
+                <label for="cognome">Cognome</label>
+                <span style="color: white; font-size:70%;">No numeri e/o caratteri speciali</span>
+                <input type="text" name="cognome" size="20" placeholder="Cognome" required>
+
+                <label for="cf">Codisce fiscale</label>
+                <span style="color: white; font-size:70%;">No caratteri speciali e minuscoli</span>
+                <input type="text" size="20" name="cf" maxlength="16" placeholder="Inserisci codice fiscale" required>
+
+                <label for="nascita">Data di nascita</label>
+                <input type="date" name="dataNascita" placeholder="gg/mm/aaaa" required>
+
+                <label for="cittaNascita">Citt&aacute; di nascita</label>
+                <span style="color: white; font-size:70%;">No numeri e/o caratteri speciali</span>
+                <input type="text" size="25" name="cittaNascita" required>
+
+                <div class="radio">
+                    <label style="margin-top: -4%;" for="sesso">Sesso:</label>
+
+                    <label style="margin-top: 3%;" for="maschio">Maschio</label>
+                    <input type="radio" name="sesso">
+
+                    <label style="margin-top: 3%; margin-left: 5%;" for="femmina">Femmina</label>
+                    <input type="radio" name="sesso">
+                </div>
+
+                <label for="numTel">Recapito telefonico</label>
+                <span style="color: white; font-size:70%;">No prefisso</span>
+                <input type="tel" name="numTel" size="20" placeholder="123-456-7890" required>
+            
+                <label for="email">Email</label>
+                <input type="email" size="25" name="email" placeholder="esempio@dominio" required>
+
+                <label for="password">Password</label>
+                <span style="color: white; font-size:70%;">Deve contenere almeno un numero, un carattere maiuscolo, un carattere minuscolo ed uno speciale. 6-20 caratteri</span>
+                <input type="password" size="20" name="password" placeholder="Inserisci password" required>
+
+                <label for="password">Conferma password</label>
+                <input type="password" size="20" name="cpassword" placeholder="Reinserisci password" required>
+
+                <div class="submit">
+                    <input type="reset" value="Reset">
+                    <input type="submit" name="invio" value="Registrati">
+                </div>
+            </div>
+    
+        </form>
+    </fieldset>
+
+</body>
+</html>

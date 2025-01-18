@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT infoMonoposto(monoposto+)>
+<!ELEMENT monoposto(nome, team, peso, vittorie, chilometraggio)>
+<!ELEMENT nome(#PCDATA)>
+<!ELEMENT team(#PCDATA)>
+<!ELEMENT peso(#PCDATA)>
+<!ELEMENT vittorie(#PCDATA)>
+<!ELEMENT chilometraggio(#PCDATA)>

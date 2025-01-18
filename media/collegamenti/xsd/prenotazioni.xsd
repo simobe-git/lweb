@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<xsd:element name="prenotazioni">
+		<xsd:complexType> 
+			<xsd:sequence>
+				<xsd:element ref="singolaPrenotazione" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="singolaPrenotazione">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="dataPrenotazione" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="tribuna" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="username" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="pagamentoEffettuato" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="N"/>
+						<xsd:enumeration value="Y"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="dataPrenotazione" type="xsd:date"/>
+
+	<xsd:element name="tribuna">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="nome" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="numeroPosto" minOccurs="1" maxOccurs="1"/>
+				<xsd:element ref="costoPosto" minOccurs="1" maxOccurs="1"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="nome" type="xsd:string"/>
+	<xsd:element name="numeroPosto" type="xsd:string"/>
+	<xsd:element name="costoPosto" type="xsd:decimal"/>
+	<xsd:element name="username" type="xsd:string"/>
+
+</xsd:schema>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<prenotazioni xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/prenotazioni.xsd">
+  <singolaPrenotazione pagamentoEffettuato="N">
+    <dataPrenotazione>2025-01-18</dataPrenotazione>
+    <tribuna>
+      <nome>Roggio</nome>
+      <numeroPosto>44</numeroPosto>
+      <costoPosto>69.99</costoPosto>
+    </tribuna>
+    <username>AAA</username>
+  </singolaPrenotazione>
+  <singolaPrenotazione pagamentoEffettuato="N">
+    <dataPrenotazione>2025-01-18</dataPrenotazione>
+    <tribuna>
+      <nome>Tribuna 21</nome>
+      <numeroPosto>22</numeroPosto>
+      <costoPosto>29.99</costoPosto>
+    </tribuna>
+    <username>AAA</username>
+  </singolaPrenotazione>
+  <singolaPrenotazione pagamentoEffettuato="N">
+    <dataPrenotazione>2025-01-18</dataPrenotazione>
+    <tribuna>
+      <nome>Tribuna 21</nome>
+      <numeroPosto>33</numeroPosto>
+      <costoPosto>29.99</costoPosto>
+    </tribuna>
+    <username>abc123</username>
+  </singolaPrenotazione>
+  <singolaPrenotazione pagamentoEffettuato="N">
+    <dataPrenotazione>2025-01-18</dataPrenotazione>
+    <tribuna>
+      <nome>Ascari 1</nome>
+      <numeroPosto>11</numeroPosto>
+      <costoPosto>65.49</costoPosto>
+    </tribuna>
+    <username>AAA</username>
+  </singolaPrenotazione>
+  <singolaPrenotazione pagamentoEffettuato="N">
+    <dataPrenotazione>2025-01-18</dataPrenotazione>
+    <tribuna>
+      <nome>Tribuna 21</nome>
+      <numeroPosto>30</numeroPosto>
+      <costoPosto>29.99</costoPosto>
+    </tribuna>
+    <username>lweb!</username>
+  </singolaPrenotazione>
+</prenotazioni>

@@ -1,0 +1,21 @@
+body{
+    background-color: grey;
+    font-size: 130%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1, h2{
+    text-align: center;
+    color: black;
+    font-size: 150%;
+}
+
+.logout{
+    position: absolute;
+    top: 2%;
+    left: 93%;
+    right: 0%;
+    width: 6%;
+    color: white;
+    font-size: 140%;
+}
